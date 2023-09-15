@@ -1,0 +1,22 @@
+<html>
+<body>
+<form action="#" method="post">
+<input type="file" id="img" name="img" accept="image/*" capture="user">
+<img id="im" height="800px" width="800px">
+</form>
+
+<script>
+const inputimg = document.getElementById('img')
+const img = document.getElementById('im')
+function getImg(event){
+ const file = event.target.files[0];
+ let url = window.URL.createObjectURL(file);
+ img.src = url
+ }
+inputimg?.addEventListener('change' , getImg)
+</script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js">
+
+</script>
+</body>
+</html>
